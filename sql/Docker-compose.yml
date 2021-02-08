@@ -1,0 +1,17 @@
+version : '3.7'
+services:
+    database:
+        image: mysql:5.7
+        container_name: sqldb_training
+        environment: 
+            - MYSQL_ROOT_PASSWORD=sqltrain
+        ports:
+            - 3306:3306
+        networks:
+            - backend
+        volumes:
+            - my-db:/var/lib/mysql
+networks:
+    backend:
+volumes:
+  my-db:
