@@ -1,6 +1,18 @@
 use training;
 
+/*
+2.8
 select
 *
 from
-Shippers
+Shippers 
+*/
+
+/*
+2.9
+Select 
+CategoryName,
+Description
+from 
+Categories
+*/
