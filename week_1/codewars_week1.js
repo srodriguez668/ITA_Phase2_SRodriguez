@@ -22,6 +22,7 @@ function spinWords(word) {
 
 spinWords("test Hello there")
 
+
 //2.9
 //The Western Suburbs Croquet Club has two categories of membership, Senior and Open. They would like your help with an application form that will tell prospective members which category they will be placed.
 //To be a senior, a member must be at least 55 years old and have a handicap greater than 7. In this croquet club, handicaps range from -2 to +26; the better the player the lower the handicap.
@@ -39,6 +40,7 @@ function openOrSenior(data) {
 }
 
 openOrSenior([[45, 12], [55, 21], [19, -2], [104, 20]])
+
 
 //2.10
 //Usually when you buy something, you're asked whether your credit card number, phone number or answer to your most secret question is still correct. However, since someone could look over your shoulder, you don't want that shown on your screen. Instead, we mask it.
@@ -72,14 +74,14 @@ maskify("should")
 function nbYear(p0, percent, aug, p) {
     totalPopulation = 0
     currentPopulation = p0;
-    years = 0 ;
+    years = 0;
 
     while (totalPopulation < p) {
-        totalPopulation = currentPopulation + currentPopulation * (percent/100) + aug;
+        totalPopulation = currentPopulation + currentPopulation * (percent / 100) + aug;
         currentPopulation = totalPopulation
-        years ++;
+        years++;
     }
-    
+
     return years;
 }
 
@@ -92,5 +94,40 @@ nbYear(1500, 5, 100, 5000)
 //         p0 += p0 * percent/100 + aug;
 //         count++;
 //     }
-//     return count;
+//     return count;}
+
+
+//2.12
+//Complete the method/function so that it converts dash/underscore delimited words into camel casing. The first word within the output should be capitalized only if the original word was capitalized (known as Upper Camel Case, also often referred to as Pascal case
+
+function toCamelCase(str) {
+    camelCase = ""
+
+    //searches string for the characters - or _ 
+    if (str.search("_") >= 0 || str.search("-") >= 0) {
+        if (str.search("_") >= 0) {
+            str = str.split("_")
+        } else {
+            str = str.split("-")
+        }
+
+        //lower cases the first letter in the first word and upper cases the first letter in the rest
+        function words(word, index) {
+            if (index === 0) {
+                camelCase += word.charAt(0).toLowerCase() + word.slice(1)
+            } else {
+                camelCase += word.charAt(0).toUpperCase() + word.slice(1)
+            }
+        }
+
+        str.forEach(words)
+    } else {
+        camelCase = str
+    }
+
+    return camelCase
+
 }
+
+toCamelCase("Hey_There")
+toCamelCase("The-Stealth-Warrior")
