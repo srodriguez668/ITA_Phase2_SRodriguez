@@ -3,20 +3,28 @@
 
 function spinWords(word) {
 
-    const splitString = word.split(" ");
+    //trim at the start to account for potential spaces in inputs
+    const splitString = word.trim().split(" ");
 
-    var output = "";
+    //var output = "";
 
-    splitString.forEach(word => {
+    // //look into filters and map
+    //  splitString.forEach(word => {
+    //     if (word.length >= 5) {
+    //         output = output.concat(word.split('').reverse().join(''), " ");
+    //     } else {
+    //         output = output.concat(word, " ");
+    //     }
+    // });
+
+
+    return splitString.map(word => {
         if (word.length >= 5) {
-            output = output.concat(word.split('').reverse().join(''), " ");
+            return word.split('').reverse().join('');
         } else {
-            output = output.concat(word, " ");
+            return word;
         }
-    });
-
-    output = output.trim();
-    return output;
+    }).join(' ');
 
 }
 
@@ -28,9 +36,12 @@ spinWords("test Hello there")
 //To be a senior, a member must be at least 55 years old and have a handicap greater than 7. In this croquet club, handicaps range from -2 to +26; the better the player the lower the handicap.
 
 function openOrSenior(data) {
-    results = []
+    //you need to add definations let/var/etc, if you don't define then it's a global scope 
+    let results = [];
     data.forEach(person => {
-        if (person[0] >= 55 && person[1] > 7) {
+        //deconstruction of an array
+        let [age, handicap] = person
+        if (age >= 55 && handicap > 7) {
             results.push('Senior')
         } else {
             results.push('Open')
@@ -63,6 +74,8 @@ function maskify(cc) {
 }
 
 maskify("should")
+
+//better solution .replace(/.(?=.{4,})/g, "#")
 
 
 //2.11
