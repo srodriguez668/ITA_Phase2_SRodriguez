@@ -16,6 +16,8 @@ function list(names) {
     return allNames
 }
 
+list([ {name: 'Bart'}, {name: 'Lisa'}, {name: 'Maggie'} ])
+
 //tried to figure out how to use map but failed at it, someone submitted an answer with it though
 //let's talk through their solution
 //function list(names) {
@@ -50,3 +52,5 @@ function validatePIN (pin) {
     })
     return busCount
 }
+
+number([[10,0],[3,5],[5,8]])
