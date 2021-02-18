@@ -36,3 +36,17 @@ function validatePIN (pin) {
   validatePIN(1342)
 
   //how could I have made my regex just 1, doing {4,6} was also including 5?
+
+  //2.18.21
+  //There is a bus moving in the city, and it takes and drop some people in each bus stop.
+  //You are provided with a list (or array) of integer arrays (or tuples). Each integer array has two items which represent number of people get into bus (The first item) and number of people get off the bus (The second item) in a bus stop.
+
+
+  var number = function(busStops){
+    let busCount=0
+    busStops.forEach(busStop => {
+        let [onBus, offBus] = busStop
+        busCount = busCount + onBus - offBus
+    })
+    return busCount
+}

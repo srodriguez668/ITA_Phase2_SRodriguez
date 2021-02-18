@@ -22,3 +22,14 @@ Suppliers
 where
 ContactTitle not like ('Marketing Manager')
 */
+
+/*
+2.18
+select
+ProductID,
+ProductName
+from
+Products
+where
+ProductName like ('%Queso%')
+*/
