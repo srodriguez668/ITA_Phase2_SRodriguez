@@ -55,17 +55,10 @@ function deleteNth(arr, n) {
         if (checkValue.get(currentValue) === n) {
             return 0
 
-        } else if(checkValue.has(currentValue) === true) {
-                checkValue.set(currentValue, (checkValue.get(currentValue) + 1))
-                return 1
-
-        //updates character and increases count to appropriate amount   
         } else {
-            checkValue.set(currentValue, 1)
-            return 1
-        }
-
-}};
+                checkValue.set(currentValue, ((checkValue.get(currentValue)||0) + 1))
+                return 1
+}}};
 
 //deleteNth([20, 37, 20, 21], 1)
 deleteNth([1,1,3,3,7,2,2,2,2], 3)
@@ -79,3 +72,4 @@ deleteNth([1,1,3,3,7,2,2,2,2], 3)
 //       return cache[n] <= x;
 //     });
 //   }
+
