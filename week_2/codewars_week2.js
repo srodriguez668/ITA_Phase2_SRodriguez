@@ -4,6 +4,8 @@
 
 function list(names) {
     let allNames = ''
+//could have used array.splice and -1 to simplify logic (splice changes the array so declare a new variable)
+//also array.join could have converted this to a string and added the ,
     names.forEach(element => {
         if (names.indexOf(element) + 2 === names.length) { 
             allNames += element.name + ' & '; 
@@ -38,6 +40,7 @@ function validatePIN (pin) {
   validatePIN(1342)
 
   //how could I have made my regex just 1, doing {4,6} was also including 5?
+  // you can do (^\d{4}$|^\d{6}$) ? true : false 
 
   //2.18.21
   //There is a bus moving in the city, and it takes and drop some people in each bus stop.
@@ -53,4 +56,12 @@ function validatePIN (pin) {
     return busCount
 }
 
-number([[10,0],[3,5],[5,8]])
+var number = function(busStops){
+    return busStops.reduce(busTotal, currentValue => {
+        let [onBus, offBus] = currentValue
+        return busTotal + onBus - offBus
+    })
+}
+
+console.log(number([[10,0],[3,5],[5,8]]))
+//I saw this being done with just a .reduce??
