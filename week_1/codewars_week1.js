@@ -114,7 +114,7 @@ nbYear(1500, 5, 100, 5000)
 //Complete the method/function so that it converts dash/underscore delimited words into camel casing. The first word within the output should be capitalized only if the original word was capitalized (known as Upper Camel Case, also often referred to as Pascal case
 
 function toCamelCase(str) {
-    camelCase = ""
+    let camelCase = ""
 
     //searches string for the characters - or _ 
     if (str.search("_") >= 0 || str.search("-") >= 0) {

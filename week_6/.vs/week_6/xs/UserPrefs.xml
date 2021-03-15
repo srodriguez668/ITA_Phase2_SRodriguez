@@ -1,0 +1,41 @@
+﻿<Properties StartupConfiguration="{56477A21-A4AA-428D-87DD-C77074613731}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="API/Controllers/UsersController.cs">
+    <Files>
+      <File FileName="API/Controllers/WeatherForecastController.cs" Line="1" Column="1" />
+      <File FileName="API/Startup.cs" Line="50" Column="39" />
+      <File FileName="API/Properties/launchSettings.json" Line="32" Column="1" />
+      <File FileName="API/Entities/AppUser.cs" Line="9" Column="1" />
+      <File FileName="API/Data/DataContext.cs" Line="13" Column="35" />
+      <File FileName="API/appsettings.Development.json" Line="13" Column="1" />
+      <File FileName="API/Data/Migrations/20210315182359_InitialCreate.cs" Line="30" Column="1" />
+      <File FileName="API/Controllers/UsersController.cs" Line="21" Column="56" />
+      <File FileName="API/Controllers/AppUsers.cs" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="week_6" expanded="True">
+            <Node name="API" expanded="True">
+              <Node name="Controllers" expanded="True">
+                <Node name="UsersController.cs" selected="True" />
+              </Node>
+              <Node name="Data" expanded="True" />
+              <Node name="Entities" expanded="True" />
+              <Node name="appsettings.json" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.API PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

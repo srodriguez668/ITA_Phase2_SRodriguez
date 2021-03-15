@@ -3,19 +3,44 @@
 //For example, if given the input 'stress', the function should return 't', since the letter t only occurs once in the string, and occurs first in the string.
 
 function firstNonRepeatingLetter(s) {
+    //if you have an error condition, return that as soon as possible
+    if(s === ""){
+        return ""
+    }
     var first;
     s.split('').some(function (character, index, obj) {
-        if (obj.indexOf(character) === obj.lastIndexOf(character) || obj.indexOf(character.toLowerCase()) === obj.lastIndexOf(character.toLowerCase())) {
+        if (obj.indexOf(character.toLowerCase()) === obj.lastIndexOf(character.toLowerCase())) {
             first = character;
             return true;
         }
         return false
     });
 
-    return s === "" ? "" : first;
+    return first;
 }
 
-firstNonRepeatingLetter('moonmen')
+function firstNonRepeatingLetter(s) {
+    if(s === ""){
+        return ""
+    }
+    var first;
+
+    //good practice don't mutate the input, and reduce the repetition 
+    //prep things then run your logic 
+
+    a = s.toLowerCase() 
+    a.split('').some(function (character, index, obj) {
+        if (obj.indexOf(character) === obj.lastIndexOf(character)) {
+            first = s[index];
+            return true;
+        }
+        return false
+    });
+
+    return first;
+}
+
+firstNonRepeatingLetter('Joonmen')
 
 // In the process of looking for a good regex I came across this one. I was creating
 // a forEach loop which this code does a much better job at. As they say, don't try to reinvent the wheel.
@@ -35,9 +60,10 @@ const rot13 = (message) => {
 
 rot13("grfg");
 
-//gi = case insensitve for regex
+//gi = case insensitve for regex or also use \w and it does the same thing  
 //Could not find any prebuilt alphabate method or a regex version to add 13, is that thing?
 //Foud the the code that matches each letter but that feels less legiable than this solution
+
 
 //2.25.21
 //Given a list lst and a number N, create a new list that contains each number of lst at most N times without 
